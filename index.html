@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Información por pieza Macuilxochilt</title>
+  <title>Información por pieza</title>
   <style>
     body {
       background-color: black;
       color: white;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    #home-button {
+      background-color: #555555;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 20px;
+      margin-right: 10px;
+    }
+    
+    #home-button:hover {
+      background-color: #777777;
     }
     
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
       justify-content: space-between;
       align-items: center;
+      padding: 20px;
     }
     
     .gallery img {
-      width: calc(50% - 10px);
+      width: 100%;
+      height: auto;
       margin-bottom: 20px;
+      cursor: pointer;
     }
     
     .popup {
@@ -30,6 +61,7 @@
       background-color: #ffffff;
       padding: 20px;
       width: 400px;
+      max-width: 90%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       z-index: 9999;
       color: black;
@@ -67,14 +99,21 @@
   </style>
 </head>
 <body>
-  <h1>Zona Arqueológica de Macuilxochilt</h1>
+  <h1>
+    <span>Zona Arqueológica, Museo Yiee Roo Macuilxochilt</span>
+    <a href="https://museosantaana.netlify.app/" id="home-button">Home</a>
+  </h1>
   
   <div class="gallery">
-    <img src="3.jpg" alt="Imagen 1" onclick="openPopup(1)">
-    <img src="4.jpg" alt="Imagen 2" onclick="openPopup(2)">
-    <img src="5.jpg" alt="Imagen 3" onclick="openPopup(3)">
-    <img src="6.jpg" alt="Imagen 4" onclick="openPopup(4)">
-    <img src="7.jpg" alt="Imagen 5" onclick="openPopup(5)">
+    <img src="11.jpg" alt="Imagen 1" onclick="openPopup(1)">
+    <img src="12.jpg" alt="Imagen 2" onclick="openPopup(2)">
+    <img src="13.jpg" alt="Imagen 3" onclick="openPopup(3)">
+    <img src="15.jpg" alt="Imagen 4" onclick="openPopup(4)">
+    <img src="33.jpg" alt="Imagen 5" onclick="openPopup(5)">
+    <img src="35.jpg" alt="Imagen 6" onclick="openPopup(6)">
+    <img src="4.jpg" alt="Imagen 7" onclick="openPopup(7)">
+    <img src="5.jpg" alt="Imagen 8" onclick="openPopup(8)">
+    <img src="9.jpg" alt="Imagen 9" onclick="openPopup(9)">
   </div>
   
   <div id="popup" class="popup">
@@ -120,6 +159,26 @@
           title.textContent = "Información de la imagen 5";
           description.textContent = "Aquí puedes agregar la información que deseas mostrar sobre la imagen 5.";
           popup.dataset.audio = "audio5.mp3";
+          break;
+        case 6:
+          title.textContent = "Información de la imagen 6";
+          description.textContent = "Aquí puedes agregar la información que deseas mostrar sobre la imagen 6.";
+          popup.dataset.audio = "audio6.mp3";
+          break;
+        case 7:
+          title.textContent = "Información de la imagen 7";
+          description.textContent = "Aquí puedes agregar la información que deseas mostrar sobre la imagen 7.";
+          popup.dataset.audio = "audio7.mp3";
+          break;
+        case 8:
+          title.textContent = "Información de la imagen 8";
+          description.textContent = "Aquí puedes agregar la información que deseas mostrar sobre la imagen 8.";
+          popup.dataset.audio = "audio8.mp3";
+          break;
+        case 9:
+          title.textContent = "Información de la imagen 9";
+          description.textContent = "Aquí puedes agregar la información que deseas mostrar sobre la imagen 9.";
+          popup.dataset.audio = "audio9.mp3";
           break;
         default:
           title.textContent = "Información de la imagen";
